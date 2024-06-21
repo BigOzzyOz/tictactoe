@@ -175,8 +175,8 @@ function getCircleSVG(text = '') {
 function getCrossSVG(text = '') {
   return `
     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <line x1="20" y1="20" x2="80" y2="80" stroke-width="10" stroke="#ff0266" />
-      <line x1="80" y1="20" x2="20" y2="80" stroke-width="10" stroke="#ff0266" />
+      <line x1="10" y1="10" x2="90" y2="90" />
+      <line x1="90" y1="10" x2="10" y2="90" />
     </svg>${text ? ' (' + text + ')' : ''}
   `;
 }
