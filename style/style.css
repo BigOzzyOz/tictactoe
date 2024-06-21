@@ -1,0 +1,260 @@
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 24px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+button {
+  background-color: #6200ea;
+  border: none;
+  padding: 15px 30px;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3700b3;
+}
+
+button:active {
+  background-color: #03dac5;
+}
+
+.symbol-selection {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.symbol-option {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.symbol-option:hover {
+  transform: scale(1.2);
+}
+
+.symbol-option svg {
+  width: 150px;
+  height: 150px;
+}
+
+.symbol-option circle {
+  stroke: #03dac5;
+  stroke-width: 15;
+}
+
+.symbol-option line {
+  stroke: #ff0266;
+  stroke-width: 15;
+}
+
+.symbol-option:hover circle,
+.symbol-option:hover line {
+  animation: colorChange 1s linear infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    stroke: #03dac5;
+  }
+
+  50% {
+    stroke: #6200ea;
+  }
+
+  100% {
+    stroke: #ff0266;
+  }
+}
+
+@keyframes selectAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.selected {
+  animation: selectAnimation 0.5s ease-in-out;
+}
+
+.game-status {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.game-status svg {
+  width: 50px;
+  height: 50px;
+}
+
+.game-status div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.score-board {
+  margin-bottom: 20px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #6200ea;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cell:hover {
+  background-color: rgba(98, 0, 234, 0.5);
+}
+
+.cell svg {
+  width: 100px;
+  height: 100px;
+}
+
+.cell svg circle {
+  stroke: #03dac5;
+  stroke-width: 8;
+}
+
+.cell svg line {
+  stroke: #ff0266;
+  stroke-width: 8;
+}
+
+.winning-line {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background-color: #03dac5;
+  transition: transform 0.5s ease;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #03dac5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #028090;
+}
+
+.button-primary {
+  color: #333;
+  /* Hier kannst du die gewünschte Schriftfarbe definieren */
+  background-color: #f0f0f0;
+  /* Hintergrundfarbe des Buttons */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.button-primary:hover {
+  background-color: #ddd;
+  /* Farbe beim Überfahren */
+}
+
+@keyframes colorSlide {
+  0% {
+    background: linear-gradient(45deg, #ff0266, 10%, #03dac5, 20%, #ff0266, 30%, #03dac5, 40%, #ff0266, 50%, #03dac5, 60%, #ff0266, 70%, #03dac5, 80%, #ff0266, 90%, #03dac5);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  20% {
+    background: linear-gradient(45deg, #ff0266, 7%, #03dac5, 17%, #ff0266, 27%, #03dac5, 37%, #ff0266, 47%, #03dac5, 57%, #ff0266, 67%, #03dac5, 77%, #ff0266, 87%, #03dac5, 97%, #ff0266);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  40% {
+    background: linear-gradient(45deg, #ff0266, 4%, #03dac5, 14%, #ff0266, 24%, #03dac5, 34%, #ff0266, 44%, #03dac5, 54%, #ff0266, 64%, #03dac5, 74%, #ff0266, 84%, #03dac5, 94%, #ff0266);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  60% {
+    background: linear-gradient(45deg, #03dac5, 10%, #ff0266, 20%, #03dac5, 30%, #ff0266, 40%, #03dac5, 50%, #ff0266, 60%, #03dac5, 70%, #ff0266, 80%, #03dac5, 90%, #ff0266);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  80% {
+    background: linear-gradient(45deg, #03dac5, 7%, #ff0266, 17%, #03dac5, 27%, #ff0266, 37%, #03dac5, 47%, #ff0266, 57%, #03dac5, 67%, #ff0266, 77%, #03dac5, 87%, #ff0266, 97%, #03dac5);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  100% {
+    background: linear-gradient(45deg, #03dac5, 4%, #ff0266, 14%, #03dac5, 24%, #ff0266, 34%, #03dac5, 44%, #ff0266, 54%, #03dac5, 64%, #ff0266, 74%, #03dac5, 84%, #ff0266, 94%, #03dac5);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+
+h1 {
+  font-size: 2.5em;
+  background: linear-gradient(45deg, #ff0266, 10%, #03dac5, 20%, #ff0266, 30%, #03dac5, 40%, #ff0266, 50%, #03dac5, 60%, #ff0266, 70%, #03dac5, 80%, #ff0266, 90%, #03dac5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: colorSlide 4s infinite alternate;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
