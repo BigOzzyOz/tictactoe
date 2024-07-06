@@ -138,8 +138,8 @@ function highlightWinner() {
   const winningCells = document.querySelectorAll(`#cell-${a}, #cell-${b}, #cell-${c}`);
 
   winningCells.forEach(cell => {
-    cell.style.backgroundColor = 'transparent'; // Zurücksetzen der Hintergrundfarbe
-    cell.style.backgroundImage = 'linear-gradient(45deg, #03dac5, #028090)'; // Hervorhebung mit Gradienten
+    cell.style.backgroundColor = 'transparent';
+    cell.style.backgroundImage = 'linear-gradient(45deg, #03dac5, #028090)';
   });
 }
 

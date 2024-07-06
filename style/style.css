@@ -191,9 +191,7 @@ button:hover {
 
 .button-primary {
   color: #333;
-  /* Hier kannst du die gewünschte Schriftfarbe definieren */
   background-color: #f0f0f0;
-  /* Hintergrundfarbe des Buttons */
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -204,7 +202,6 @@ button:hover {
 
 .button-primary:hover {
   background-color: #ddd;
-  /* Farbe beim Überfahren */
 }
 
 @keyframes colorSlide {
